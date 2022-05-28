@@ -38,3 +38,73 @@ body{
     max-width: 300px;
     margin: auto;
 }
+.header{
+    background-color: rgb(255, 123, 0);
+    padding: 10px;
+    height: 25px;
+}
+.out a{
+    text-decoration: none;
+    color: black;
+}
+
+.kit{
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: White;
+    background-color: rgb(255, 123, 0);
+    border-radius: 10px;
+}
+
+.kit a{
+    text-decoration: none;
+    color: White;
+    font-size: 30px;
+}
+
+.menu{
+    padding-left: 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.word{
+    padding: 30px;
+    background-color: rgb(253, 123, 47);
+    margin: auto;
+    max-width: 300px;
+    font-size: 30px;
+    border-radius: 20px;
+}
+.settings{
+    padding: 30px;
+    background-color: rgb(253, 123, 47);
+    margin: auto;
+    max-width: 300px;
+    font-size: 30px;
+    border-radius: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.settings a{
+    text-decoration: none;
+    color: Grey;
+}
+.grey{
+    color: Grey;
+}
+.var{
+    padding: 20px;
+    background-color: rgb(255, 186, 146);
+    margin: auto;
+    max-width: 300px;
+    font-size: 2s0px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
