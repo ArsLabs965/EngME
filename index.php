@@ -48,7 +48,7 @@ $err = 0; //Сбор ошибок при анализе формы
 </head>
 <body>
     <div class="center">
-        <img src="img/logo.png" width="400px" alt="">
+        <img src="img/logo.png" width="200px" alt="">
         <form action="" method="post" class="regform">
             <?php
                  if($err == 1){
