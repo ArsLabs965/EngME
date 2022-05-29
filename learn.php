@@ -87,6 +87,7 @@
     var tr = 0;
     var canclick = 1;
     var fails = [];
+    var last = 1;
 
     <?php
  $colvo = 0;
@@ -127,10 +128,11 @@ $colvo++;
             $(".line").html(fa);
             return 0;
         }
-        
+        if(last){
         do{
             ng = rand(en.length);
         }while(asked[ng] == 1)
+    }
         $(".word").html(ru[ng]);
         $("#counter").html(goed + '/' + en.length);
         var rp = rand(3) + 1;
@@ -171,10 +173,12 @@ $colvo++;
             asked[ng] = 1;
             goed++;
             $("#v" + tr).css('background-color', 'Green');
+            last = 1;
         }else{
             fails[ng] = 1;
             $("#v" + tr).css('background-color', 'Green');
             $("#v" + nu).css('background-color', 'Red');
+            last = 0;
         }
         canclick = 0;
         setTimeout(newgen, 2000);
