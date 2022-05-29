@@ -28,9 +28,9 @@
                 $en = mysqli_real_escape_string($connection, $_POST['en']);
         
                 if($ru != "" AND $en != ""){
-                    $query = mysqli_query($connection, "SELECT * FROM `words` WHERE `eng` = '$en'");
+                    $query = mysqli_query($connection, "SELECT * FROM `words` WHERE `eng` = '$en' AND `kit` = '$kit'");
                     if(!($query_clear = mysqli_fetch_assoc($query))){
-                        $query = mysqli_query($connection, "SELECT * FROM `words` WHERE `rus` = '$ru'");
+                        $query = mysqli_query($connection, "SELECT * FROM `words` WHERE `rus` = '$ru' AND `kit` = '$kit'");
                     if(!($query_clear = mysqli_fetch_assoc($query))){
                         mysqli_query($connection, "INSERT INTO `words` (`kit`, `rus`, `eng`) VALUES ('$kit', '$ru', '$en')");  
                         $ru = '';
