@@ -86,6 +86,7 @@
     var goed = 0;
     var tr = 0;
     var canclick = 1;
+    var fails = [];
 
     <?php
  $colvo = 0;
@@ -109,7 +110,21 @@ $colvo++;
 
     function newgen(){
         if(goed == en.length){
-            $(".line").html("Вы прошли набор слов!");
+            var fa = 'Не правильно отвеченные слова: <br><br>';
+            var fcl = 0;
+            for(var i = 0; i < en.length; i++){
+                if(fails[i] == 1){
+                fa += ru[i];
+                fa += '<br>';
+                fa += en[i];
+                fa += '<br>';
+                fa += '<br>';
+                fcl++;
+                }
+            }
+            fa += 'Всего: ';
+            fa += fcl;
+            $(".line").html(fa);
             return 0;
         }
         
@@ -122,9 +137,9 @@ $colvo++;
         tr = rp;
         var olds = -1;
         $("#v" + rp).html(en[ng]);
-        $("#v1").css('background-color', 'rgb(253, 123, 47)');
-        $("#v2").css('background-color', 'rgb(253, 123, 47)');
-        $("#v3").css('background-color', 'rgb(253, 123, 47)');
+        $("#v1").css('background-color', 'rgb(113, 215, 255)');
+        $("#v2").css('background-color', 'rgb(113, 215, 255)');
+        $("#v3").css('background-color', 'rgb(113, 215, 255)');
         canclick = 1;
         for(var i = 1; i < 4; i++){
             if(i == rp){
@@ -157,6 +172,7 @@ $colvo++;
             goed++;
             $("#v" + tr).css('background-color', 'Green');
         }else{
+            fails[ng] = 1;
             $("#v" + tr).css('background-color', 'Green');
             $("#v" + nu).css('background-color', 'Red');
         }
